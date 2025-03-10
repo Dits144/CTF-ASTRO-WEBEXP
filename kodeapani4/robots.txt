@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /script.js
+Disallow: /style.css
+Disallow: /style1.css
+Allow: /index.php
+Allow: /tidakterlihat.html

@@ -1,0 +1,19 @@
+body {
+    background-color: black;
+    text-align: center;
+    color: white;
+}
+
+img {
+    height: 350px;
+}
+
+.popup {
+    visibility: hidden;
+}
+
+/* Flag dalam base64 */
+#flag-container::before {
+    content: "QVNURUNURntwM3IzbXB1NG5fc3VsMXRfZDFfbTNuZzNydGl9"; /* Base64 encoding */
+    visibility: hidden;
+}

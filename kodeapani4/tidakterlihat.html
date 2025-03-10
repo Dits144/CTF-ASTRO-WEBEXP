@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tidak Terlihat</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <h1>Bisakah kamu membuat cewek ini terlihat ?</h1>
+    <img src="https://c.tenor.com/YrKN4wVNqSIAAAAC/tenor.gif" alt="">
+    <div class="popup" id="popup" visibility="hidden">
+        <h2>Congratulation</h2>
+        <div class="row" id="flag-container"></div>
+    </div>
+    
+    <script>
+        // Ambil data flag dari CSS
+        window.onload = function() {
+            const flagContainer = document.getElementById('flag-container');
+            const computedStyle = window.getComputedStyle(flagContainer, '::before');
+            const encodedFlag = computedStyle.getPropertyValue('content').replace(/["']/g, ''); // Menghapus tanda kutip dari CSS
+            const decodedFlag = atob(encodedFlag);  // Dekripsi Base64
+            const flagText = document.createElement('p');
+            flagText.textContent = decodedFlag;
+            flagContainer.appendChild(flagText);
+        };
+    </script>
+</body>
+</html>
